@@ -11,10 +11,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.IdentityModel.Tokens;
-using NLog;
-using NLog.Extensions.Logging;
-using NLog.Web;
-using Swashbuckle.AspNetCore.Swagger;
 using UserService.WEB.Authentication;
 using UserService.WEB.Authentication.Middlewares;
 using UserService.WEB.Filters;
@@ -32,8 +28,6 @@ namespace UserService.WEB
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
-
-            env.ConfigureNLog("NLog.config");
         }
 
         public IConfigurationRoot Configuration { get; }
@@ -78,12 +72,6 @@ namespace UserService.WEB
             IOptions<TokenProviderOptions> tokenProviderOptions,
             IOptions<TokenValidationParameters> tokenValidationOptions)
         {
-            loggerFactory.AddNLog();
-            app.AddNLogWeb();
-
-
-
-            ConfigLogManager();
 
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
@@ -116,11 +104,6 @@ namespace UserService.WEB
         private string GetXmlCommentsPath(ApplicationEnvironment appEnvironment)
         {
             return Path.Combine(appEnvironment.ApplicationBasePath, $"{appEnvironment.ApplicationName}.xml");
-        }
-
-        private void ConfigLogManager()
-        {
-            LogManager.Configuration.Variables["configDir"] = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
         }
     }
 }

@@ -4,3 +4,4 @@ C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.DAL\bin\
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.DAL\obj\Debug\netstandard1.6\UserService.DAL.AssemblyInfo.cs
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.DAL\obj\Debug\netstandard1.6\UserService.DAL.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.DAL\obj\Debug\netstandard1.6\UserService.DAL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.DAL\obj\Debug\netstandard1.6\UserService.DAL.csprojResolveAssemblyReference.cache

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.Extensions.Logging;
 using UserService.BLL.DTO;
 using UserService.BLL.Infrastructure.Exceptions;
 using UserService.BLL.Interfaces;
@@ -16,13 +15,11 @@ namespace UserService.BLL.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-        private readonly ILogger<RoleService> _logger;
 
-        public RoleService(IUnitOfWork unitOfWork, IMapper mapper, ILogger<RoleService> logger)
+        public RoleService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _logger = logger;
         }
 
 
@@ -40,8 +37,6 @@ namespace UserService.BLL.Services
             }
 
             var roleDto = _mapper.Map<RoleDto>(role);
-
-            _logger.LogInformation($"Get role by name: {name}");
 
             return roleDto;
         }
@@ -62,8 +57,6 @@ namespace UserService.BLL.Services
             var roleToCreate = new Role { Name = name };
 
             await _unitOfWork.Roles.CreateAsync(roleToCreate);
-
-            _logger.LogInformation($"New role {name} created");
         }
     }
 }

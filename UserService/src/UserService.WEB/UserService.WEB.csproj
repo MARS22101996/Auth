@@ -22,15 +22,8 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <None Remove="NLog.config" />
     <None Remove="UserService.WEB.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="NLog.config">
-      <Link>NLog.config</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -59,8 +52,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.1.1" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.1.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0-*" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.3.1" />
   </ItemGroup>
 
 </Project>

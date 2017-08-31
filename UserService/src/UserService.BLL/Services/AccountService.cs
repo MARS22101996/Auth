@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using Microsoft.Extensions.Logging;
 using UserService.BLL.DTO;
 using UserService.BLL.Infrastructure.Exceptions;
 using UserService.BLL.Interfaces;
@@ -11,13 +10,12 @@ using UserService.DAL.Interfaces;
 
 namespace UserService.BLL.Services
 {
-    public class AccountService : IAccountService
+	public class AccountService : IAccountService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IRoleService _roleService;
         private readonly ICryptoProvider _cryptoProvider;
         private readonly IMapper _mapper;
-        private readonly ILogger<AccountService> _logger;
 	    private const string AdminEmail = "admin@mail.com";
 	    private const string AdminPassword = "Pass1";
 
@@ -25,14 +23,14 @@ namespace UserService.BLL.Services
             IUnitOfWork unitOfWork, 
             IRoleService roleService, 
             ICryptoProvider cryptoProvider, 
-            IMapper mapper, 
-            ILogger<AccountService> logger)
+            IMapper mapper
+          )
         {
             _unitOfWork = unitOfWork;
             _roleService = roleService;
             _cryptoProvider = cryptoProvider;
             _mapper = mapper;
-            _logger = logger;
+         
         }
 
         public UserDto Login(LoginModelDto loginModel)
@@ -47,8 +45,6 @@ namespace UserService.BLL.Services
             }
 
             var userDto = _mapper.Map<UserDto>(user);
-
-            _logger.LogInformation($"User login with email {loginModel.Email}");
 
             return userDto;
         }
@@ -83,8 +79,6 @@ namespace UserService.BLL.Services
             user.PasswordHash = _cryptoProvider.GetHash(registerModelDto.Password);
 
             await _unitOfWork.Users.CreateAsync(user);
-
-            _logger.LogInformation($"User register with email {registerModelDto.Email}");
         }
 
         private void ValidateEmail(string email)
