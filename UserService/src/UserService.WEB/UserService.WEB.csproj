@@ -20,15 +20,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>UserService.WEB.xml</DocumentationFile>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="UserService.WEB.xml" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="NLog.config">
       <Link>NLog.config</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </None>
-	<None Update="UserService.WEB.xml">
-      <Link>UserService.WEB.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </None>

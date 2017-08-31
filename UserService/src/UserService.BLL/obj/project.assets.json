@@ -2194,13 +2194,6 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "UserService.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        }
-      },
       "UserService.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
@@ -6931,11 +6924,6 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "UserService.Core/1.0.0": {
-      "type": "project",
-      "path": "../UserService.Core/UserService.Core.csproj",
-      "msbuildProject": "../UserService.Core/UserService.Core.csproj"
-    },
     "UserService.DAL/1.0.0": {
       "type": "project",
       "path": "../UserService.DAL/UserService.DAL.csproj",
@@ -6949,7 +6937,6 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 1.1.0",
       "NETStandard.Library >= 1.6.1",
       "NLog.Extensions.Logging >= 1.0.0-rtm-beta4",
-      "UserService.Core >= 1.0.0",
       "UserService.DAL >= 1.0.0"
     ]
   },
@@ -6970,9 +6957,6 @@
       "frameworks": {
         "netstandard1.6": {
           "projectReferences": {
-            "C:\\Users\\Mariia_Suvalova\\Desktop\\Task4\\Auth\\UserService\\src\\UserService.Core\\UserService.Core.csproj": {
-              "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\Task4\\Auth\\UserService\\src\\UserService.Core\\UserService.Core.csproj"
-            },
             "C:\\Users\\Mariia_Suvalova\\Desktop\\Task4\\Auth\\UserService\\src\\UserService.DAL\\UserService.DAL.csproj": {
               "projectPath": "C:\\Users\\Mariia_Suvalova\\Desktop\\Task4\\Auth\\UserService\\src\\UserService.DAL\\UserService.DAL.csproj"
             }

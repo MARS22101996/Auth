@@ -8,8 +8,6 @@ namespace UserService.WEB.Infrastructure.Automapper
     {
         public ApiModelToDtoProfile()
         {
-            CreateMap<UserApiModel, UserDto>();
-            CreateMap<RoleApiModel, RoleDto>();
             CreateMap<LoginApiModel, LoginModelDto>();
             CreateMap<RegisterApiModel, RegisterModelDto>();
         }

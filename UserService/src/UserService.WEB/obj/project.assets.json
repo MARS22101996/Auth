@@ -4233,15 +4233,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "NLog.Extensions.Logging": "1.0.0-rtm-beta4",
-          "UserService.Core": "1.0.0",
           "UserService.DAL": "1.0.0"
-        }
-      },
-      "UserService.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
         }
       },
       "UserService.DAL/1.0.0": {
@@ -8623,15 +8615,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "NLog.Extensions.Logging": "1.0.0-rtm-beta4",
-          "UserService.Core": "1.0.0",
           "UserService.DAL": "1.0.0"
-        }
-      },
-      "UserService.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
         }
       },
       "UserService.DAL/1.0.0": {
@@ -12974,15 +12958,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "NLog.Extensions.Logging": "1.0.0-rtm-beta4",
-          "UserService.Core": "1.0.0",
           "UserService.DAL": "1.0.0"
-        }
-      },
-      "UserService.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v1.6",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
         }
       },
       "UserService.DAL/1.0.0": {
@@ -20580,11 +20556,6 @@
       "type": "project",
       "path": "../UserService.BLL/UserService.BLL.csproj",
       "msbuildProject": "../UserService.BLL/UserService.BLL.csproj"
-    },
-    "UserService.Core/1.0.0": {
-      "type": "project",
-      "path": "../UserService.Core/UserService.Core.csproj",
-      "msbuildProject": "../UserService.Core/UserService.Core.csproj"
     },
     "UserService.DAL/1.0.0": {
       "type": "project",

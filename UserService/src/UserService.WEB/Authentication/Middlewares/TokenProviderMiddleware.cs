@@ -87,9 +87,9 @@ namespace UserService.WEB.Authentication.Middlewares
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, now.ToUniversalTime().Second.ToString(), ClaimValueTypes.Integer64)
             };
-			//claims.Add(new Claim(ClaimTypes.Role, "admin"));
+
             claims.AddRange(identity);
-            //claims.Add(identity.FindFirst(claim => claim.Type.Equals("userId")));
+
 
             var jwt = new JwtSecurityToken(
                 issuer: _options.Issuer,

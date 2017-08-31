@@ -1,8 +1,0 @@
-2017-08-31 22:49:48.0289|CorrelationId=| UserService |INFO|UserService.BLL.Services.RoleService|Get role by name: user 
-2017-08-31 22:49:48.3291|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User register with email xamarin@ukr.net 
-2017-08-31 22:49:51.2122|CorrelationId=| UserService |INFO|UserService.WEB.Controllers.AccountController|User was registration with email: xamarin@ukr.net 
-2017-08-31 22:49:51.4254|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User login with email xamarin@ukr.net 
-2017-08-31 23:04:04.5208|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User login with email xamarin@ukr.net 
-2017-08-31 23:11:34.7082|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User login with email xamarin@ukr.net 
-2017-08-31 23:12:14.8553|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User login with email xamarin@ukr.net 
-2017-08-31 23:57:32.0264|CorrelationId=| UserService |INFO|UserService.BLL.Services.AccountService|User login with email xamarin@ukr.net 

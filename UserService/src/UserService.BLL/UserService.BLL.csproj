@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UserService.Core\UserService.Core.csproj" />
     <ProjectReference Include="..\UserService.DAL\UserService.DAL.csproj" />
   </ItemGroup>
 

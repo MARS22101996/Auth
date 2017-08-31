@@ -13,7 +13,6 @@ namespace UserService.WEB.Infrastructure.DI
     {
         public static void Resolve(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<IUserService, BLL.Services.UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IAccountService, AccountService>();
             services.AddTransient<ICryptoProvider, MD5CryptoProvider>();

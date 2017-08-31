@@ -44,11 +44,7 @@ namespace UserService.WEB.Authentication
 
 			claims.Add(new Claim(ClaimTypes.Email, loginApiModel.Email));
 
-			//var claims = new ClaimsIdentity(
-			//	new GenericIdentity(userDto.Email, "Token"));
-
 			claims.Add(new Claim("userId", userDto.Id.ToString()));
-			//claims.AddClaim(new Claim(ClaimTypes.Role, role));
 
 			return claims;
         }

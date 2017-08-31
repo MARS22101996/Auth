@@ -1,7 +1,0 @@
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\bin\Debug\netstandard1.6\UserService.Core.deps.json
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\bin\Debug\netstandard1.6\UserService.Core.dll
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\bin\Debug\netstandard1.6\UserService.Core.pdb
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\obj\Debug\netstandard1.6\UserService.Core.csprojResolveAssemblyReference.cache
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\obj\Debug\netstandard1.6\UserService.Core.AssemblyInfo.cs
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\obj\Debug\netstandard1.6\UserService.Core.dll
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.Core\obj\Debug\netstandard1.6\UserService.Core.pdb

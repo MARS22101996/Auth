@@ -14,7 +14,6 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "NLog.Extensions.Logging": "1.0.0-rtm-beta4",
-          "UserService.Core": "1.0.0",
           "UserService.DAL": "1.0.0"
         },
         "runtime": {
@@ -1421,14 +1420,6 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "userservice.core/1.0.0": {
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
-        "runtime": {
-          "UserService.Core.dll": {}
-        }
-      },
       "userservice.dal/1.0.0": {
         "dependencies": {
           "MongoDB.Driver": "2.4.2",
@@ -2292,11 +2283,6 @@
       "sha512": "sha512-2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ==",
       "path": "system.xml.xmldocument/4.0.1",
       "hashPath": "system.xml.xmldocument.4.0.1.nupkg.sha512"
-    },
-    "userservice.core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "userservice.dal/1.0.0": {
       "type": "project",

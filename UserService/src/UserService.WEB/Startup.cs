@@ -69,12 +69,6 @@ namespace UserService.WEB
             });
 
             services.AddAutoMapper();
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Version = "v1", Title = "User Service API" });
-                c.IncludeXmlComments(GetXmlCommentsPath(PlatformServices.Default.Application));
-            });
         }
 
         public void Configure(
@@ -116,13 +110,6 @@ namespace UserService.WEB
             });
 
             app.UseMvc();
-
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1 Docs");
-            });
 
         }
 

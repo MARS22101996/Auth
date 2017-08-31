@@ -25,33 +25,6 @@ namespace UserService.BLL.Services
             _logger = logger;
         }
 
-        public IEnumerable<RoleDto> GetAll()
-        {
-            var roles = _unitOfWork.Roles.GetAll();
-            var roleDtos = _mapper.Map<IEnumerable<RoleDto>>(roles);
-
-            _logger.LogInformation("Get all roles");
-
-            return roleDtos;
-        }
-
-        public async Task<RoleDto> GetAsync(Guid id)
-        {
-            var role = await _unitOfWork.Roles.GetAsync(id);
-
-            if (role == null)
-            {
-                throw new EntityNotFoundException(
-                    $"Role with such id does not exist. Id: {id}",
-                    "Role");
-            }
-
-            var roleDto = _mapper.Map<RoleDto>(role);
-
-            _logger.LogInformation($"Get role with id: {id}");
-
-            return roleDto;
-        }
 
         public RoleDto Get(string name)
         {
@@ -91,22 +64,6 @@ namespace UserService.BLL.Services
             await _unitOfWork.Roles.CreateAsync(roleToCreate);
 
             _logger.LogInformation($"New role {name} created");
-        }
-
-        public async Task DeleteAsync(Guid id)
-        {
-            var role = await _unitOfWork.Roles.GetAsync(id);
-
-            if (role == null)
-            {
-                throw new EntityNotFoundException(
-                    $"Role with such id does not exist. Id: {id}",
-                    "Role");
-            }
-
-            await _unitOfWork.Roles.DeleteAsync(id);
-
-            _logger.LogInformation($"Role with id: {id} was deleted");
         }
     }
 }

@@ -6,10 +6,8 @@ C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.pdb
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.BLL.dll
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.Core.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.DAL.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.BLL.pdb
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.Core.pdb
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.DAL.pdb
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.csprojResolveAssemblyReference.cache
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.AssemblyInfo.cs

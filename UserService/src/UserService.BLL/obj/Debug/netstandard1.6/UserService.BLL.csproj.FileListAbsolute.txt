@@ -1,9 +1,7 @@
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.BLL.deps.json
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.BLL.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.BLL.pdb
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.Core.dll
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.DAL.dll
-C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.Core.pdb
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\bin\Debug\netstandard1.6\UserService.DAL.pdb
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\obj\Debug\netstandard1.6\UserService.BLL.csprojResolveAssemblyReference.cache
 C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.BLL\obj\Debug\netstandard1.6\UserService.BLL.AssemblyInfo.cs
