@@ -14,9 +14,11 @@ namespace Auth.WEB.Controllers
         {
             ViewData["Message"] = "Your application description page.";
 
-	        var i = User.GetUserName();
+	        var i = User.GetRole();
 
-            return View();
+			var ii = User.GetUserId();
+
+			return View();
         }
 
         public IActionResult Contact()

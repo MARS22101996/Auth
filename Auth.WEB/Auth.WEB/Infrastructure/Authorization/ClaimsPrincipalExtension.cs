@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 
 namespace Auth.WEB.Infrastructure.Authorization
@@ -10,12 +13,12 @@ namespace Auth.WEB.Infrastructure.Authorization
             return Guid.Parse(claimsPrincipal.FindFirst("userId").Value);
         }
 
-        public static string GetUserName(this ClaimsPrincipal claimsPrincipal)
+		public static string GetRole(this ClaimsPrincipal claimsPrincipal)
+		{
+			return claimsPrincipal.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role").Value;
+		}
+		public static string GetUserName(this ClaimsPrincipal claimsPrincipal)
         {
-			var i = claimsPrincipal.FindFirst("http://schemas.microsoft.com/ws/2008/06/identity/claims/role");
-
-			var test = claimsPrincipal.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name");
-
 			return claimsPrincipal.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value;
         }
     }

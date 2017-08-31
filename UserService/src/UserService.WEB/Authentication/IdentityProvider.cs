@@ -7,6 +7,7 @@ using UserService.BLL.Infrastructure.Exceptions;
 using UserService.BLL.Interfaces;
 using UserService.WEB.Authentication.Interfaces;
 using UserService.WEB.Models.AccountApiModels;
+using System.Collections.Generic;
 
 namespace UserService.WEB.Authentication
 {
@@ -21,7 +22,7 @@ namespace UserService.WEB.Authentication
             _mapper = mapper;
         }
 
-        public ClaimsIdentity GetIdentity(LoginApiModel loginApiModel)
+	    public List<Claim> GetIdentity(LoginApiModel loginApiModel)
         {
             var loginModelDto = _mapper.Map<LoginModelDto>(loginApiModel);
             UserDto userDto;
@@ -35,15 +36,21 @@ namespace UserService.WEB.Authentication
                 return null;
             }
 
-            var roleClaims = userDto.Roles.Select(role => new Claim("roles", role)).ToList();
+			var role = userDto.Roles.FirstOrDefault();
 
-            var claims = new ClaimsIdentity(
-                new GenericIdentity(userDto.Email, "Token"),
-                roleClaims);
+			var claims = new List<Claim>();
 
-            claims.AddClaim(new Claim("userId", userDto.Id.ToString()));
+			claims.Add(new Claim(ClaimTypes.Role, role));
 
-            return claims;
+			claims.Add(new Claim(ClaimTypes.Email, loginApiModel.Email));
+
+			//var claims = new ClaimsIdentity(
+			//	new GenericIdentity(userDto.Email, "Token"));
+
+			claims.Add(new Claim("userId", userDto.Id.ToString()));
+			//claims.AddClaim(new Claim(ClaimTypes.Role, role));
+
+			return claims;
         }
     }
 }

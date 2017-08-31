@@ -74,8 +74,7 @@ namespace UserService.WEB.Authentication.Middlewares
             var password = context.Request.Form["password"];
             var now = DateTime.UtcNow;
 
-            var identity = _identityProvider
-                .GetIdentity(new LoginApiModel { Email = username, Password = password });
+            var identity = _identityProvider.GetIdentity(new LoginApiModel { Email = username, Password = password });
 
             if (identity == null)
             {
@@ -88,8 +87,9 @@ namespace UserService.WEB.Authentication.Middlewares
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, now.ToUniversalTime().Second.ToString(), ClaimValueTypes.Integer64)
             };
-            claims.AddRange(identity.FindAll(claim => claim.Type.Equals("roles")));
-            claims.Add(identity.FindFirst(claim => claim.Type.Equals("userId")));
+			//claims.Add(new Claim(ClaimTypes.Role, "admin"));
+            claims.AddRange(identity);
+            //claims.Add(identity.FindFirst(claim => claim.Type.Equals("userId")));
 
             var jwt = new JwtSecurityToken(
                 issuer: _options.Issuer,
