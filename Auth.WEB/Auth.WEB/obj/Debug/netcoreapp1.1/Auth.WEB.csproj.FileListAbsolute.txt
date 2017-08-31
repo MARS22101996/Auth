@@ -1,0 +1,9 @@
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\bin\Debug\netcoreapp1.1\Auth.WEB.deps.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\bin\Debug\netcoreapp1.1\Auth.WEB.runtimeconfig.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\bin\Debug\netcoreapp1.1\Auth.WEB.runtimeconfig.dev.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\obj\Debug\netcoreapp1.1\Auth.WEB.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\obj\Debug\netcoreapp1.1\Auth.WEB.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\bin\Debug\netcoreapp1.1\Auth.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\bin\Debug\netcoreapp1.1\Auth.WEB.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\obj\Debug\netcoreapp1.1\Auth.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\Auth.WEB\Auth.WEB\obj\Debug\netcoreapp1.1\Auth.WEB.pdb

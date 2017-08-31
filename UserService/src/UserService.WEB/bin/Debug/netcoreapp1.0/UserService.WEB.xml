@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UserService.WEB</name>
+    </assembly>
+    <members>
+        <member name="M:UserService.WEB.Controllers.AccountController.Register(UserService.WEB.Models.AccountApiModels.RegisterApiModel)">
+            <summary>
+            Registers a new user
+            </summary>
+            <param name="model">Contains user's login, password, name</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.RoleController.Get(System.Guid)">
+            <summary>
+            Returns role with id
+            </summary>
+            <param name="id">Role id</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.RoleController.Get">
+            <summary>
+            Returns all roles
+            </summary>
+        </member>
+        <member name="M:UserService.WEB.Controllers.RoleController.Post(UserService.WEB.Models.AccountApiModels.RoleApiModel)">
+            <summary>
+            Creates new role
+            </summary>
+            <param name="roleApiModel">Role model</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.RoleController.Delete(System.Guid)">
+            <summary>
+            Deletes role with id 
+            </summary>
+            <param name="id">Role id</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.UserController.Get(System.Guid)">
+            <summary>
+            Returns user's entity with id
+            </summary>
+            <param name="id">User's id</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.UserController.Get(System.String)">
+            <summary>
+            Returns user's entity with email (or a list of all users when email is not defined)
+            </summary>
+            <param name="email">User's email(optional)</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.UserController.AutocompleteSearch(System.String)">
+            <summary>
+            Gets emails by key letters
+            </summary>
+            <param name="term">Key letters for searching</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.UserController.AddToRole(System.Guid,System.String)">
+            <summary>
+            Adds role for user
+            </summary>
+            <param name="userId">User id</param>
+            <param name="roleName">Role name</param>
+        </member>
+        <member name="M:UserService.WEB.Controllers.UserController.RemoveFromRole(System.Guid,System.String)">
+            <summary>
+            Removes role from user
+            </summary>
+            <param name="userId">User id</param>
+            <param name="roleName">Role name</param>
+        </member>
+    </members>
+</doc>

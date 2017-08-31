@@ -1,0 +1,17 @@
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\NLog.config
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.xml
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.deps.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.runtimeconfig.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.runtimeconfig.dev.json
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.WEB.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.BLL.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.Core.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.DAL.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.BLL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.Core.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\bin\Debug\netcoreapp1.0\UserService.DAL.pdb
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.csprojResolveAssemblyReference.cache
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.AssemblyInfo.cs
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.dll
+C:\Users\Mariia_Suvalova\Desktop\Task4\Auth\UserService\src\UserService.WEB\obj\Debug\netcoreapp1.0\UserService.WEB.pdb
