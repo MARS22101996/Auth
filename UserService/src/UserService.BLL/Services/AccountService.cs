@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.Extensions.Logging;
@@ -17,6 +18,8 @@ namespace UserService.BLL.Services
         private readonly ICryptoProvider _cryptoProvider;
         private readonly IMapper _mapper;
         private readonly ILogger<AccountService> _logger;
+	    private const string AdminEmail = "admin@mail.com";
+	    private const string AdminPassword = "Pass1";
 
         public AccountService(
             IUnitOfWork unitOfWork, 
@@ -34,7 +37,9 @@ namespace UserService.BLL.Services
 
         public UserDto Login(LoginModelDto loginModel)
         {
-            var user = _unitOfWork.Users.Find(u => u.Email.Equals(loginModel.Email)).FirstOrDefault();
+	        CreateAdminIfNotExists();
+
+			var user = _unitOfWork.Users.Find(u => u.Email.Equals(loginModel.Email)).FirstOrDefault();
 
             if (user == null || !_cryptoProvider.VerifyHash(loginModel.Password, user.PasswordHash))
             {
@@ -48,13 +53,32 @@ namespace UserService.BLL.Services
             return userDto;
         }
 
+	    private async void  CreateAdminIfNotExists()
+	    {
+			var user = _unitOfWork.Users.Find(u => u.Email.Equals(AdminEmail)).FirstOrDefault();
+
+		    if (user == null)
+		    {
+			    var userdmin = new User
+			    {
+				    Email = AdminEmail,
+				    Name = AdminEmail,
+				    PasswordHash = _cryptoProvider.GetHash(AdminPassword),
+					Roles = new List<string>()
+			    };
+
+				AppendRole(userdmin, "admin");
+
+				await _unitOfWork.Users.CreateAsync(userdmin);
+			}
+		}
         public async Task RegisterAsync(RegisterModelDto registerModelDto)
         {
             ValidateEmail(registerModelDto.Email);
 
             var user = _mapper.Map<User>(registerModelDto);
 
-            AppendDefaultRole(user);
+            AppendRole(user, "user");
 
             user.PasswordHash = _cryptoProvider.GetHash(registerModelDto.Password);
 
@@ -71,18 +95,18 @@ namespace UserService.BLL.Services
             }
         }
 
-        private void AppendDefaultRole(User user)
+        private void AppendRole(User user, string role)
         {
             try
             {
-                _roleService.Get("user");
+                _roleService.Get(role);
             }
             catch (EntityNotFoundException)
             {
-                _roleService.CreateAsync("user");
+                _roleService.CreateAsync(role);
             }
 
-            user.Roles = user.Roles.Append("user");
+            user.Roles = user.Roles.Append(role);
         }
     }
 }
