@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 using Auth.WEB.Infrastructure.Authorization;
+using Auth.WEB.Infrastructure.DI;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +29,8 @@ namespace Auth.WEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+			DependencyResolver.Resolve(services, Configuration);
+
 			services
 				.Configure<TokenValidationParameters>(Configuration.GetSection("TokenValidationParameters"))
 				.Configure<TokenValidationParameters>(options =>

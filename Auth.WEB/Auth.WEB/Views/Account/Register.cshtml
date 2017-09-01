@@ -9,22 +9,22 @@
         <form asp-controller="Account" asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="login">
             <h2>Create a new account</h2>
             <hr />
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" placeholder="Enter your name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group col-xs-12">
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" placeholder="Enter your email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="form-group mgn-top">
+            <div class="form-group col-xs-12">
                 <label asp-for="Password" class="control-label mgn-top"></label>
                 <input asp-for="Password" placeholder="Enter password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <div class="form-group mgn-top">
+            <div class="form-group col-xs-12">
                 <label asp-for="ConfirmPassword" class="control-label mgn-top">Confirm password</label>
                 <input asp-for="ConfirmPassword" placeholder="Confirm password" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>

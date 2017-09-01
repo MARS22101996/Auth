@@ -1,31 +1,24 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Auth.WEB.RequestSettings.Exceptions;
+using Auth.WEB.RequestSettings.Inerfaces;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
 namespace Auth.WEB.RequestSettings
 {
-    public class RequestService
+    public class RequestService : IRequestService
     {
-		//private readonly CommunicationOptions _configuration;
-
-	    public RequestService()
-	    {
-		    //_configuration = communicationOptions.Value;
-	    }
+	    private const string Defaultpath = "http://localhost:5000/UserService/";
 
 	    public async Task<TResponse> PostAsync<TResponse, TRequest>(
 			string requestPath,
 			TRequest data,
-			IHeaderDictionary headers = null,
-			string urlPrefix = "default")
+			IHeaderDictionary headers = null)
 		{
 			string responseText;
 
-			//var requestUrl = "http://localhost:54027/" + requestPath;
-
-			var requestUrl = "http://localhost:5000/UserService/" + requestPath;
+			var requestUrl = Defaultpath + requestPath;
 
 			try
 			{
@@ -46,13 +39,11 @@ namespace Auth.WEB.RequestSettings
 		public async Task<string> PostAsync(
 		   string requestPath,
 		   object data,
-		   IHeaderDictionary headers = null,
-		   string urlPrefix = "default")
+		   IHeaderDictionary headers = null)
 		{
 			string responseText;
 
-			//var requestUrl = "http://localhost:54027/" + requestPath;
-		    var requestUrl = "http://localhost:5000/UserService/" + requestPath;
+		    var requestUrl = Defaultpath + requestPath;
 
 			try
 			{
@@ -82,26 +73,5 @@ namespace Auth.WEB.RequestSettings
 				throw new Exception(msg);
 			}
 		}
-
-		//private string FormRequestUrl(string requestPath, string urlPrefix, Dictionary<string, string> urlParameters = null)
-		//{
-		//	if (string.IsNullOrEmpty(urlPrefix) || urlPrefix.Equals("default"))
-		//	{
-		//		urlPrefix = _configuration.DefaultPrefix;
-		//	}
-
-		//	requestPath = requestPath.Trim('/');
-		//	urlPrefix = urlPrefix.Trim('/');
-		//	var hostAddress = _configuration.HostAddress.Trim('/');
-
-		//	var requestUrl = hostAddress + '/' + urlPrefix + '/' + requestPath;
-
-		//	if (urlParameters != null)
-		//	{
-		//		requestUrl += ParseUrlParameters(urlParameters);
-		//	}
-
-		//	return requestUrl;
-		//}
 	}
 }

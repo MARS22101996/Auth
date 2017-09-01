@@ -9,25 +9,8 @@ using Newtonsoft.Json;
 
 namespace Auth.WEB.RequestSettings
 {
-    internal static class RequestSender
+    public static class RequestSender
     {
-        /// <summary>
-        /// Sends the request asynchronous.
-        /// </summary>
-        /// <param name="requestUrl">The request URL.</param>
-        /// <param name="httpMethod">The HTTP method.</param>
-        /// <param name="data">The data.</param>
-        /// <param name="headers">The headers.</param>
-        /// <returns>Task&lt;string&gt;</returns>
-        /// <exception cref="WebRequestException">
-        /// Cannot get response
-        /// or
-        /// 403. Forbidden
-        /// or
-        /// 401. Unauthorized
-        /// or
-        /// </exception>
-        /// <exception cref="BadRequestException"></exception>
         public static async Task<string> SendRequestAsync(string requestUrl, string httpMethod, object data = null, IHeaderDictionary headers = null)
         {
             string responseText;
@@ -71,15 +54,6 @@ namespace Auth.WEB.RequestSettings
             return responseText;
         }
 
-        /// <summary>
-        /// Forms the request asynchronous.
-        /// </summary>
-        /// <param name="requestUrl">The request URL.</param>
-        /// <param name="httpMethod">The HTTP method.</param>
-        /// <param name="data">The data.</param>
-        /// <param name="headers">The headers.</param>
-        /// <returns>Task&lt;HttpWebRequest&gt;</returns>
-        /// This text was inserted by Ievhenii_Tkachenko. 3/28/2017.3:45 PM
         private static async Task<HttpWebRequest> FormRequestAsync(string requestUrl, string httpMethod, object data, IHeaderDictionary headers)
         {
             var request = WebRequest.CreateHttp(requestUrl);

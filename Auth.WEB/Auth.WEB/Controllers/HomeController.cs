@@ -10,20 +10,16 @@ namespace Auth.WEB.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Admin()
         {
-            ViewData["Message"] = "Your application description page.";
-
-	        var i = User.GetRole();
-
-			var ii = User.GetUserId();
+            ViewData["Message"] = "Hello, Admin!";
 
 			return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Users()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Hello, users!";
 
             return View();
         }

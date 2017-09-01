@@ -23,12 +23,6 @@ namespace Auth.WEB.Controllers
                     .Add(new KeyValuePair<string, StringValues>("Authorization", Request.Headers["Authorization"]));
             }
 
-            if (Request.Headers.ContainsKey("CorrelationId"))
-            {
-                headers
-                    .Add(new KeyValuePair<string, StringValues>("CorrelationId", Request.Headers["CorrelationId"]));
-            }
-
             return headers;
         }
     }
