@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using AuthClient.Infrastructure.Authorization;
 using AuthClient.Infrastructure.DI;
 using AutoMapper;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 namespace AuthClient
 {
@@ -22,7 +24,12 @@ namespace AuthClient
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
-        }
+
+	        Log.Logger = new LoggerConfiguration()
+		        .MinimumLevel.Debug()
+		        .WriteTo.RollingFile(Path.Combine(env.ContentRootPath, "log-{Date}.txt"))
+		        .CreateLogger();
+		}
 
         public IConfigurationRoot Configuration { get; }
 
@@ -54,7 +61,9 @@ namespace AuthClient
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            if (env.IsDevelopment())
+			loggerFactory.AddSerilog();
+
+			if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();

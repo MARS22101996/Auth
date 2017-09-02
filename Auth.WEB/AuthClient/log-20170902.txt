@@ -1,0 +1,48 @@
+2017-09-02 12:02:15.199 +03:00 [Debug] Hosting starting
+2017-09-02 12:02:15.358 +03:00 [Debug] Hosting started
+2017-09-02 12:02:15.779 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" started.
+2017-09-02 12:02:15.786 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" started.
+2017-09-02 12:02:15.807 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" received FIN.
+2017-09-02 12:02:15.821 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" received FIN.
+2017-09-02 12:02:15.822 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" disconnecting.
+2017-09-02 12:02:15.830 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" disconnecting.
+2017-09-02 12:02:15.831 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" sending FIN.
+2017-09-02 12:02:15.833 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" sending FIN.
+2017-09-02 12:02:15.839 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" sent FIN with status "0".
+2017-09-02 12:02:15.843 +03:00 [Debug] Connection id ""0HL7HS57CEQBJ"" stopped.
+2017-09-02 12:02:15.846 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" sent FIN with status "0".
+2017-09-02 12:02:15.847 +03:00 [Debug] Connection id ""0HL7HS57CEQBI"" stopped.
+2017-09-02 12:02:17.037 +03:00 [Debug] Connection id ""0HL7HS57CEQBK"" started.
+2017-09-02 12:02:17.137 +03:00 [Information] Request starting HTTP/1.1 GET http://localhost:50797/  
+2017-09-02 12:02:17.228 +03:00 [Debug] The request path "/" does not match a supported file type
+2017-09-02 12:02:17.251 +03:00 [Debug] The request path "/" does not match a supported file type
+2017-09-02 12:02:17.364 +03:00 [Debug] Request successfully matched the route with name '"default"' and template '"{controller=Home}/{action=Index}/{id?}"'.
+2017-09-02 12:02:17.454 +03:00 [Debug] Executing action "AuthClient.Controllers.HomeController.Index (AuthClient)"
+2017-09-02 12:02:17.504 +03:00 [Information] Executing action method "AuthClient.Controllers.HomeController.Index (AuthClient)" with arguments (null) - ModelState is Valid
+2017-09-02 12:02:17.508 +03:00 [Information] Test
+2017-09-02 12:02:17.514 +03:00 [Debug] Executed action method "AuthClient.Controllers.HomeController.Index (AuthClient)", returned result "Microsoft.AspNetCore.Mvc.ViewResult".
+2017-09-02 12:02:17.608 +03:00 [Debug] View lookup cache miss for view '"Index"' in controller '"Home"'.
+2017-09-02 12:02:17.626 +03:00 [Debug] Code generation for the Razor file at '"/Views/Home/Index.cshtml"' started.
+2017-09-02 12:02:17.982 +03:00 [Debug] Code generation for the Razor file at '"/Views/Home/Index.cshtml"' completed in 350.4026ms.
+2017-09-02 12:02:17.993 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Home/Index.cshtml"' started.
+2017-09-02 12:02:18.989 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Home/Index.cshtml"' completed in 996.1212ms.
+2017-09-02 12:02:18.996 +03:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-09-02 12:02:19.001 +03:00 [Debug] Code generation for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 4.3076ms.
+2017-09-02 12:02:19.003 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' started.
+2017-09-02 12:02:19.034 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/_ViewStart.cshtml"' completed in 29.6029ms.
+2017-09-02 12:02:19.042 +03:00 [Debug] The view '"Index"' was found.
+2017-09-02 12:02:19.047 +03:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-09-02 12:02:19.116 +03:00 [Information] User profile is available. Using '"C:\Users\Mariia_Suvalova\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2017-09-02 12:02:19.176 +03:00 [Debug] View lookup cache miss for view '"_Layout"' in controller '"Home"'.
+2017-09-02 12:02:19.178 +03:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-09-02 12:02:19.235 +03:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 54.036ms.
+2017-09-02 12:02:19.237 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' started.
+2017-09-02 12:02:19.346 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_Layout.cshtml"' completed in 107.7365ms.
+2017-09-02 12:02:19.415 +03:00 [Debug] View lookup cache miss for view '"_LoginPartial"' in controller '"Home"'.
+2017-09-02 12:02:19.417 +03:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_LoginPartial.cshtml"' started.
+2017-09-02 12:02:19.432 +03:00 [Debug] Code generation for the Razor file at '"/Views/Shared/_LoginPartial.cshtml"' completed in 14.8151ms.
+2017-09-02 12:02:19.434 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_LoginPartial.cshtml"' started.
+2017-09-02 12:02:19.479 +03:00 [Debug] Compilation of the generated code for the Razor file at '"/Views/Shared/_LoginPartial.cshtml"' completed in 43.0965ms.
+2017-09-02 12:02:19.703 +03:00 [Information] Executed action "AuthClient.Controllers.HomeController.Index (AuthClient)" in 2244.192ms
+2017-09-02 12:02:19.808 +03:00 [Debug] Connection id ""0HL7HS57CEQBK"" completed keep alive response.
+2017-09-02 12:02:19.824 +03:00 [Information] Request finished in 2710.384ms 200 text/html; charset=utf-8

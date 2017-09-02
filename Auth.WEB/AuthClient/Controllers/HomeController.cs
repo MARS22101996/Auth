@@ -1,19 +1,31 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using ILogger = Serilog.ILogger;
+
 
 namespace AuthClient.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+		ILogger<HomeController> logger;
+		public HomeController(ILogger<HomeController> logger)
+	    {
+			this.logger = logger;
+		}
+		public IActionResult Index()
         {
-            return View();
+			logger.LogInformation("Test");
+
+			return View();
         }
 
         public IActionResult Admin()
         {
             ViewData["Message"] = "Hello, Admin!";
 
-            return View();
+			logger.LogInformation("Test");
+
+			return View();
         }
 
         public IActionResult Users()
